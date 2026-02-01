@@ -137,6 +137,58 @@
       box-shadow: 0 0 35px rgba(79,195,247,0.25);
     }
 
+    /* EXPERIENCE */
+    .timeline-background {
+      padding: 110px 10%;
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(15,23,42,0.95), rgba(2,6,23,0.98)),
+        url('herobackgroundGif.gif') center/cover;
+        /** url('https://img.freepik.com/free-vector/realistic-background-futuristic-style_23-2149129125.jpg?semt=ais_user_personalization&w=740&q=80') center/cover; */
+        
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: #4fc3f7;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 60px;
+      padding-left: 40px;
+    }
+
+    .timeline-date {
+      min-width: 120px;
+      color: #4fc3f7;
+      font-weight: 600;
+    }
+
+    .timeline-content {
+      background: #0f172a;
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid rgba(79,195,247,0.2);
+      transition: 0.3s;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(79,195,247,0.35);
+    }
+
     /* ---------- LEADERSHIP ---------- */
     .leadership-grid {
       display: grid;
@@ -182,19 +234,28 @@
 
 <section class="hero">
   <img src="profile.jpg" alt="Francisco Siqueiros">
-  <div>
-    <h1>Francisco Siqueiros</h1>
-    <h2>Senior Software Engineer</h2>
-    <p>
-      Senior Backend / Full‑Stack Engineer with deep expertise in Java, enterprise databases and scalable architectures.
-      I build high‑impact solutions, lead teams and turn complex legacy systems into high‑performance platforms.
-    </p>
-    <div class="cta">
-      <a class="primary" href="mailto:panchosiqueiros94@gmail.com"> <i class="fa-solid fa-phone"></i> Contact Me</a>
-      <a class="secondary" href="https://www.linkedin.com/in/francisco-gabriel-siqueiros-paredes-b95b82194" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-      <a href="cv.pdf" class="btn secondary"> <i class="fa-solid fa-download"></i> Download CV</a>
+  <div style="width: 70%;">
+    
+    <div>
+      <h1>Francisco Siqueiros</h1>
+      <h2>Senior Software Engineer</h2>
+      <p>
+        Senior Backend / Full‑Stack Engineer with deep expertise in Java, enterprise databases and scalable architectures.
+        I build high‑impact solutions, lead teams and turn complex legacy systems into high‑performance platforms.
+      </p>
+      <div class="cta">
+        <a class="primary" href="mailto:panchosiqueiros94@gmail.com"> <i class="fa-solid fa-phone"></i> Contact Me</a>
+        <a class="secondary" href="https://www.linkedin.com/in/francisco-gabriel-siqueiros-paredes-b95b82194" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="cv.pdf" class="btn secondary"> <i class="fa-solid fa-download"></i> Download CV</a>
+      </div>
     </div>
   </div>
+  <div style="align-items: center;">
+    <img src="https://cdn-icons-png.flaticon.com/512/6509/6509613.png" alt="coding icon">
+    <br>
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/006/601/767/small/mexico-flag-with-waving-effect-official-proportion-vector.jpg" alt="logo mx flag">
+  </div>
+
 </section>
 
 <section class="tech-stack">
@@ -220,6 +281,48 @@
     <div class="stack-card"><i class="fa-regular fa-square-plus"></i><h3>Much</h3><h3> more!!</h3></div>
   </div>
 </section>
+
+  <section class="timeline-background">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2023 — Present</div>
+        <div class="timeline-content">
+          <h3>Software Engineer – Interax</h3>
+          <ul>
+            <li>Led complex database migrations in legacy systems.</li>
+            <li>Designed high-impact modernization solutions.</li>
+            <li>Achieved up to <strong>4,500% performance improvements</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2021 — 2023</div>
+        <div class="timeline-content">
+          <h3>Software Consultant – Phyhold</h3>
+          <ul>
+            <li>Led and mentored development teams.</li>
+            <li>Translate clients and define requirements.</li>
+            <li>Improved response times by <strong>6,000%</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2016 — 2019</div>
+        <div class="timeline-content">
+          <h3>Software asistant – Freelancer</h3>
+          <ul>
+            <li>develops proyects for micro-companys.</li>
+            <li>Create a SBC System and infraestructure to <Strong>automatize</Strong> a <br><Strong>building</Strong> and connect them through Mqtt message.</li>
+            <li>Solve PLC issues and optimize process for important <br> production lines with important clients such as <br>  <strong>Constalation brands, Heineken and Femsa</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 <section class="leadership">
   <h2>Leadership & Mindset</h2>
