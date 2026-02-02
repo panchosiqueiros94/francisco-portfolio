@@ -2,48 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Francisco Siqueiros | Senior Software Engineer</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome (Icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
+  <!-- Devicons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <!-- GSAP -->
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 
+  <!-- Main Styles -->
   <link rel="stylesheet" href="styles.css">
-
 </head>
+
 <body>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
 
-  <!-- Video background -->
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="heroVidBackground.MP4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 
-  <!-- Overlay oscuro -->
   <div class="hero-overlay"></div>
 
-  <!-- Contenido -->
   <div class="hero-content">
 
-    <img src="profile.jpg" alt="Francisco Siqueiros">
+    <div class="hero-left">
+      <img src="profile.jpg" alt="Francisco Siqueiros">
+    </div>
 
-    <div style="width: 90%;">
+    <div class="hero-center">
       <h1>Francisco Siqueiros</h1>
       <h2>Senior Software Engineer</h2>
       <p>
-        Senior Backend / Full-Stack Engineer with deep expertise in Java, enterprise databases and scalable architectures.
-        I build high-impact solutions, lead teams and turn complex legacy systems into high-performance platforms.
+        Senior Backend / Full-Stack Engineer with deep expertise in Java, enterprise databases
+        and scalable architectures. I build high-impact solutions, lead teams and modernize
+        complex legacy systems into high-performance platforms.
       </p>
 
       <div class="cta">
@@ -54,25 +56,25 @@
         <a class="secondary" href="cv.pdf">
           <i class="fa-solid fa-download"></i> Download CV
         </a>
-        <a href="https://wa.me/529992582714" target="_blank" class="contact-btn whatsapp">
+        <a class="contact-btn whatsapp" href="https://wa.me/529992582714" target="_blank">
           <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
       </div>
     </div>
 
-    <div style="align-items: center;">
+    <div class="hero-right">
       <div class="circle-wrapper">
         <img src="https://cdn-icons-png.flaticon.com/512/6509/6509613.png" alt="coding icon">
       </div>
-
       <div class="circle-wrapper">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/601/767/small/mexico-flag-with-waving-effect-official-proportion-vector.jpg" alt="logo mx flag">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/601/767/small/mexico-flag-with-waving-effect-official-proportion-vector.jpg" alt="Mexico flag">
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- ================= TECH STACK ================= -->
 <section class="tech-stack">
   <h2>Tech Stack</h2>
   <div class="stack-grid">
@@ -93,10 +95,11 @@
     <div class="stack-card"><i class="devicon-postman-plain"></i><h3>Postman</h3><p>Expert</p></div>
     <div class="stack-card"><i class="devicon-ubuntu-plain-wordmark"></i><h3>Ubuntu</h3><p>Advanced</p></div>
     <div class="stack-card"><i class="devicon-git-plain"></i><h3>Git</h3><p>Expert</p></div>
-    <div class="stack-card"><i class="fa-regular fa-square-plus"></i><h3>Much</h3><h3> more!!</h3></div>
+    <div class="stack-card"><i class="fa-solid fa-layer-group"></i><h3>Much More</h3></div>
   </div>
 </section>
 
+<!-- ================= EXPERIENCE ================= -->
   <section class="timeline-background">
     <h2 class="section-title">Experience</h2>
     <div class="timeline">
@@ -138,22 +141,32 @@
     </div>
   </section>
 
-
+<!-- ================= LEADERSHIP ================= -->
 <section class="leadership">
   <h2>Leadership & Mindset</h2>
   <div class="leadership-grid">
-    <div class="leadership-card"><i class="fa-solid fa-people-group"></i><h3>Team Leadership</h3><p>Leading and mentoring high‑performance engineering teams.</p></div>
-    <div class="leadership-card"><i class="fa-solid fa-lightbulb"></i><h3>Problem Solving</h3><p>Turning complex challenges into elegant technical solutions.</p></div>
-    <div class="leadership-card"><i class="fa-solid fa-chart-line"></i><h3>Optimization</h3><p>Extreme performance tuning and system scalability.</p></div>
-    <div class="leadership-card"><i class="fa-solid fa-comments"></i><h3>Client Communication</h3><p>Clear technical communication and requirement negotiation.</p></div>
+    <div class="leadership-card"><i class="fa-solid fa-people-group"></i><h3>Team Leadership</h3><p>Mentoring and leading engineering teams.</p></div>
+    <div class="leadership-card"><i class="fa-solid fa-lightbulb"></i><h3>Problem Solving</h3><p>Transforming complexity into clarity.</p></div>
+    <div class="leadership-card"><i class="fa-solid fa-chart-line"></i><h3>Optimization</h3><p>Extreme performance tuning.</p></div>
+    <div class="leadership-card"><i class="fa-solid fa-comments"></i><h3>Communication</h3><p>Clear and effective client communication.</p></div>
   </div>
 </section>
 
+<!-- ================= CONTACT ================= -->
 <section class="contact" id="contact">
   <h2>Let’s build something great</h2>
-  <p>Email: <a href="mailto:panchosiqueiros94@gmail.com">panchosiqueiros94@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-gabriel-siqueiros-paredes-b95b82194" target="_blank">View Profile</a></p>
-  <p>whatsapp: <a href="https://wa.me/529992582714"> + 52 999 258 2714</a></p>
+
+  <div class="contact-buttons">
+    <a class="contact-btn email" href="mailto:panchosiqueiros94@gmail.com">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
+    <a class="contact-btn linkedin" href="https://www.linkedin.com/in/francisco-gabriel-siqueiros-paredes-b95b82194" target="_blank">
+      <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
+    <a class="contact-btn whatsapp" href="https://wa.me/529992582714" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+  </div>
 </section>
 
 <script>
@@ -161,13 +174,13 @@
     gsap.from(section, {
       opacity: 0,
       y: 80,
-      duration: 1.1,
+      duration: 1,
       scrollTrigger: {
         trigger: section,
         start: 'top 85%'
       }
-    })
-  })
+    });
+  });
 </script>
 
 </body>

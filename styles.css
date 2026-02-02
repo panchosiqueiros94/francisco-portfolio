@@ -1,189 +1,208 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .circle-wrapper {
-      width: 12rem;
-      height: 12rem;
-      border-radius: 50%;
-      overflow: hidden;      
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid #4fc3f7;
-      box-shadow: 0 0 15px rgba(79,195,247,0.4);
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-    .circle-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-
-
-    body {
-      background: #020617;
-      color: #e5e7eb;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    section {
-      padding: 110px 10%;
-      position: relative;
-    }
-
-    /* ---------- BACKGROUNDS ---------- */
-/*     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      gap: 80px;
-      background:
-        linear-gradient(120deg, rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
-        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') center/cover;
-    } */
-
-    .hero {
+section {
+  padding: 110px 10%;
   position: relative;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: #4fc3f7;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #cbd5f5;
+  max-width: 700px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
   min-height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
 
-    .tech-stack {
-      background:
-        linear-gradient(180deg, rgba(2,6,23,0.95), rgba(15,23,42,0.95)),
-        url('https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&w=1600&q=80') center/cover;
-    }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.95)
+  );
+  z-index: 2;
+}
 
-    .leadership {
-      background:
-        linear-gradient(180deg, rgba(15,23,42,0.95), rgba(2,6,23,0.98)),
-        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80') center/cover;
-    }
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 80px;
+  align-items: center;
+}
 
-    /* ---------- HERO ---------- */
-    .hero-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 1;
-    }
+.hero-left img {
+  width: 240px;
+  border-radius: 22px;
+  box-shadow: 0 0 40px rgba(79, 195, 247, 0.35);
+}
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        120deg,
-        rgba(2, 6, 23, 0.85),
-        rgba(2, 6, 23, 0.95)
-      );
-      z-index: 2;
-    }
+.hero-center p {
+  margin: 25px 0 35px;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      align-items: center;
-      gap: 80px;
-      width: 100%;
-      padding: 0 10%;
-    }
+/* =========================
+   CTA BUTTONS
+========================= */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
 
+.cta a,
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
+.cta .primary {
+  background: #4fc3f7;
+  color: #020617;
+}
 
-    .hero img {
-      width: 260px;
-      border-radius: 22px;
-      box-shadow: 0 0 40px rgba(79,195,247,0.35);
-    }
+.cta .secondary {
+  border: 1px solid #4fc3f7;
+  color: #4fc3f7;
+}
 
-    .hero h1 {
-      font-size: 3.4rem;
-      font-weight: 700;
-    }
+.cta a:hover,
+.contact-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(79, 195, 247, 0.4);
+}
 
-    .hero h2 {
-      color: #4fc3f7;
-      margin-top: 10px;
-      font-weight: 600;
-    }
+/* =========================
+   CIRCLE ICONS
+========================= */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
-    .hero p {
-      margin: 25px 0 35px;
-      max-width: 560px;
-      color: #cbd5f5;
-    }
+.circle-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #4fc3f7;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.4);
+  transition: 0.3s;
+}
 
-    .cta a {
-      display: inline-block;
-      margin-right: 15px;
-      padding: 14px 26px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+.circle-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .cta .primary {
-      background: #4fc3f7;
-      color: #020617;
-    }
+.circle-wrapper:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 30px rgba(79, 195, 247, 0.6);
+}
 
-    .cta .secondary {
-      border: 1px solid #4fc3f7;
-      color: #4fc3f7;
-    }
+/* =========================
+   TECH STACK
+========================= */
+.tech-stack {
+  background: linear-gradient(
+      rgba(2, 6, 23, 0.95),
+      rgba(15, 23, 42, 0.95)
+    ),
+    url('https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&w=1600&q=80')
+      center / cover;
+}
 
-    .cta a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(79,195,247,0.4);
-    }
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
 
-    /* ---------- TECH STACK ---------- */
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 30px;
-      margin-top: 60px;
-    }
+.stack-card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(79, 195, 247, 0.15);
+  text-align: center;
+  transition: 0.35s;
+}
 
-    .stack-card {
-      background: linear-gradient(145deg, #0f172a, #020617);
-      padding: 30px;
-      border-radius: 18px;
-      border: 1px solid rgba(79,195,247,0.15);
-      text-align: center;
-      transition: 0.35s;
-    }
+.stack-card i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #4fc3f7;
+}
 
-    .stack-card i {
-      font-size: 3rem;
-      margin-bottom: 18px;
-      color: #4fc3f7;
-    }
+.stack-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(79, 195, 247, 0.25);
+}
 
-    .stack-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 0 35px rgba(79,195,247,0.25);
-    }
-
-    /* EXPERIENCE */
+/* =========================
+   TIMELINE
+========================= */
     .timeline-background {
       padding: 110px 10%;
       position: relative;
@@ -235,86 +254,121 @@
       box-shadow: 0 0 25px rgba(79,195,247,0.35);
     }
 
-    /* ---------- LEADERSHIP ---------- */
-    .leadership-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 35px;
-      margin-top: 60px;
-    }
+/* =========================
+   LEADERSHIP
+========================= */
+.leadership {
+  background: linear-gradient(
+      rgba(15, 23, 42, 0.95),
+      rgba(2, 6, 23, 0.98)
+    ),
+    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')
+      center / cover;
+}
 
-    .leadership-card {
-      background: linear-gradient(145deg, #0f172a, #020617);
-      padding: 30px;
-      border-radius: 18px;
-      border: 1px solid rgba(79,195,247,0.15);
-      transition: 0.35s;
-      text-align: center;
-    }
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 35px;
+  margin-top: 60px;
+}
 
-    .leadership-card i {
-      font-size: 2.6rem;
-      color: #4fc3f7;
-      margin-bottom: 15px;
-    }
+.leadership-card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(79, 195, 247, 0.15);
+  text-align: center;
+  transition: 0.35s;
+}
 
-    .leadership-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 30px rgba(79,195,247,0.25);
-    }
+.leadership-card i {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  color: #4fc3f7;
+}
 
-    /* ---------- CONTACT ---------- */
-    .contact {
-      text-align: center;
-    }
+.leadership-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(79, 195, 247, 0.25);
+}
 
-    .contact a {
-      color: #4fc3f7;
-      text-decoration: none;
-      font-weight: 600;
-    }
+/* =========================
+   CONTACT
+========================= */
+.contact {
+  text-align: center;
+}
 
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    
-    .contact-btn {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      border-radius: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-    
-    .contact-btn i {
-      font-size: 1.2rem;
-    }
-    
-    /* Email */
-    .contact-btn.email {
-      background: #2563eb; /* blue */
-    }
-    
-    /* LinkedIn */
-    .contact-btn.linkedin {
-      background: #0a66c2;
-    }
-    
-    /* WhatsApp */
-    .contact-btn.whatsapp {
-      background: #25d366;
-    }
-    
-    .contact-btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
-    }
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.contact-btn.email {
+  background: #2563eb;
+  color: #e5e7eb;
+}
+
+.contact-btn.linkedin {
+  background: #0a66c2;
+  color: #e5e7eb;
+}
+
+.contact-btn.whatsapp {
+  background: #25d366;
+  color: #020617;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+@media (max-width: 900px) {
+  section {
+    padding: 90px 7%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .hero-left img {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .hero-right {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cta {
+    justify-content: center;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-date {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cta a,
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
