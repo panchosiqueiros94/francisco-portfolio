@@ -200,6 +200,105 @@ p {
   box-shadow: 0 0 35px rgba(79, 195, 247, 0.25);
 }
 
+/* ============================
+  TECH STACK 2
+  ========================== */
+.stack-accordion {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.stack-section {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border-radius: 18px;
+  border: 1px solid rgba(79,195,247,0.15);
+  overflow: hidden;
+}
+
+.stack-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 26px 30px;
+  color: #e5e7eb;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.stack-header i {
+  color: #4fc3f7;
+  font-size: 1.6rem;
+  margin-right: 12px;
+}
+
+.stack-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+  padding: 0 30px;
+}
+
+.stack-section.active .stack-content {
+  max-height: 600px;
+  padding-bottom: 30px;
+}
+
+.stack-section .chevron {
+  transition: transform 0.3s ease;
+}
+
+.stack-section.active .chevron {
+  transform: rotate(180deg);
+}
+
+
+/* =========================
+  skill bars
+  ======================== */
+.skill {
+  margin-top: 22px;
+}
+
+.skill span {
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.skill .level {
+  float: right;
+  color: #94a3b8;
+}
+
+.bar {
+  height: 8px;
+  background: #020617;
+  border-radius: 6px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4fc3f7, #38bdf8);
+  border-radius: 6px;
+  width: 0;
+  transition: width 0.9s ease;
+}
+
+/* Levels */
+.fill.expert { width: 100%; }
+.fill.advanced { width: 75%; }
+.fill.medium { width: 50%; }
+.fill.basic { width: 30%; }
+
+
 /* =========================
    TIMELINE
 ========================= */
@@ -357,6 +456,10 @@ p {
 
   .timeline-date {
     font-size: 0.9rem;
+  }
+
+  .stack-accordion {
+    grid-template-columns: 1fr;
   }
 }
 
